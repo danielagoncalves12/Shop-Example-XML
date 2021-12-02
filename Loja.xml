@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE Loja SYSTEM "Loja.dtd">
+
+<Loja>
+
+    <Utilizadores>
+
+        <Utilizador id = "U_001" username = "AlexFigas" password = "ABCD">
+
+            <nome>Alexandre Figueiredo</nome>
+            <email>alexfigas11@gmail.com</email>
+            <data_nascimento>09/11/2000</data_nascimento>
+            <numero_telefone>915117433</numero_telefone>
+            <morada>Rua da República Nº74 1º Esquerdo</morada>
+            <foto link = 'C:\Users\AlexFigas\Fotografias\AlexFigas.jpg' />
+            <produtos_desejados/>
+            <carrinho_compras></carrinho_compras>
+
+        </Utilizador>
+
+        <Utilizador id = "U_002" username = "Dannie" password = "DEFG">
+
+            <nome>Daniela Gonçalves</nome>
+            <email>dannie@gmail.com</email>
+            <data_nascimento>12/06/2000</data_nascimento>
+            <numero_telefone>934584155</numero_telefone>
+            <morada>Rua Vasco da Gama Nº3 RCº Esquerdo</morada>
+            <produtos_desejados id_produtos="P_004"/>
+            <carrinho_compras id_produtos="P_001 P_002">2</carrinho_compras> 
+
+        </Utilizador>
+
+        <Utilizador id = "U_003" username = "MSousa" password = "HIJK">
+
+            <nome>Maria Sousa</nome>
+            <email>mariahelenamarianesouza-77@outlook.com</email>
+            <data_nascimento>15/07/1949</data_nascimento>
+            <numero_telefone>917567534</numero_telefone>
+            <numero_telefone>926565788</numero_telefone>
+            <morada>Rua Silo nº5 2º Direito, Bairro Boa Vista</morada>
+            <produtos_desejados id_produtos = "P_002"/>
+            <carrinho_compras id_produtos = "P_003">1</carrinho_compras> 
+
+        </Utilizador>
+
+        <Utilizador id = "U_004" username = "AndreBarbosa" password = "ImBeutiful">
+            <nome>André Barbosa</nome>
+            <email>andre.barbosa@tempmail.com</email>
+            <numero_telefone>961234567</numero_telefone>
+            <morada>Rua da Beleza Nº12</morada>
+            <carrinho_compras>0</carrinho_compras>
+
+        </Utilizador>
+
+    </Utilizadores>
+
+    <Vendedores>
+
+        <Vendedor id = "V_001" username = "Apple" password = "senhaApple">
+
+            <nome>Lúcia Fátima Rezende</nome>
+            <email>luciafatimarezende_@hotmail.com</email>
+            <data_nascimento>10/09/1993</data_nascimento>
+            <numero_telefone>921563122</numero_telefone>
+            <morada>Rua Guerra Junqueiro 21-1</morada>
+            <foto link = 'C:\Users\Fotografias\Perfil.jpg'/>
+
+        </Vendedor>
+
+        <Vendedor id = "V_002" username = "Samsung" password = "senhaSamsung">
+
+            <nome>Márcio Mendes</nome>
+            <email>mmarciogustavomendes@hotmail.com</email>
+            <data_nascimento>07/11/1979</data_nascimento>
+            <numero_telefone>937567565</numero_telefone>
+            <numero_telefone>214465855</numero_telefone>
+            <morada>Rua Teixeira de Souza nº 10</morada>
+
+        </Vendedor>
+
+        <Vendedor id = "V_003" username = "Nintendo" password = "senhaNintendo">
+
+            <nome>Rafael da Conceição</nome>
+            <email>rafaelconceicao@yahoo.com</email>
+            <numero_telefone>216547445</numero_telefone>
+            <morada>Rua São Sebastião nº 14</morada>
+            <foto link = 'C:\Users\Fotografias\Foto.jpg'/>
+
+        </Vendedor>
+
+    </Vendedores>
+
+    <Produtos>
+
+        <Produto id = "P_001" id_vendedor = "V_001" nome = "iPhone X">
+
+            <descricao>iPhone X (iPhone 10) e é uma verdadeira revolução em termos de design e hardware.</descricao>
+            <caracteristicas_tecnicas nome = "Apple" valor = "512" />
+            <preco>349.99€</preco>
+            <data_insercao>25/10/2020</data_insercao>
+            <transportadora opcao = "CTT"/>
+            <link imagem = "https://bit.ly/3BIlOG5" />
+            <referencias id_produtos = "P_002 P_004"/>
+
+        </Produto>
+
+        <Produto id = "P_002" id_vendedor = "V_002" nome = "Samsung Galaxy S20">
+
+            <descricao>Compre já o Samsung Galaxy S20 na Samsung Portugal.</descricao>
+            <caracteristicas_tecnicas nome = "Samsung" valor = "1024" />
+            <preco>1240.78€</preco>
+            <data_insercao>24/10/2020</data_insercao>
+            <transportadora opcao = "CTT"/>
+            <transportadora opcao = "SEUR"/>
+            <link imagem = "https://bit.ly/31qejY8" />
+            <referencias/> 
+
+        </Produto>
+
+        <Produto id = "P_003" id_vendedor = "V_003" nome = "Nintendo Switch">
+
+            <descricao>Joga os teus títulos preferidos quando, onde e como quiseres.</descricao>
+            <caracteristicas_tecnicas nome = "Nintendo" valor = "2" />
+            <preco>299.99€</preco>
+            <data_insercao>10/11/2020</data_insercao>
+            <transportadora opcao = "SEUR"/>
+            <link imagem = "https://bit.ly/3bwdBuh" video = "https://bit.ly/2ZQm2Ow"/>
+            <referencias/>
+
+        </Produto>
+
+        <Produto id = "P_004" id_vendedor = "V_001" nome = "Apple AirPods">
+
+            <descricao>Auriculares True Wireless Apple AirPods.</descricao>
+            <caracteristicas_tecnicas nome = "Apple" valor = "200" />
+            <preco>199.99€</preco>
+            <data_insercao>12/11/2020</data_insercao>
+            <transportadora opcao = "CTT"/>
+            <transportadora opcao = "MRW"/>
+            <referencias id_produtos = "P_001"/>
+
+        </Produto>
+
+    </Produtos>
+
+    <Compras>
+
+        <Compra id = "C_001" id_comprador = "U_004" situacao = "entregue">
+
+            <produto_compra id_produto = "P_003" quantidade = "2"/>
+            <data_compra>19/10/2021</data_compra>
+
+        </Compra>
+
+        <Compra id = "C_002" id_comprador = "U_001" situacao = "emExpedicao">
+
+            <produto_compra id_produto = "P_001" quantidade = "1"/>
+            <data_compra>20/10/2021</data_compra>
+
+        </Compra>
+
+        <Compra id = "C_003" id_comprador = "U_002" situacao = "cancelada">
+
+            <produto_compra id_produto = "P_003" quantidade = "1"/>
+            <data_compra>31/10/2021</data_compra>
+
+        </Compra>
+     
+        <Compra id = "C_004" id_comprador = "U_003" situacao = "entregue">
+
+            <produto_compra id_produto = "P_001" quantidade = "1"/>
+            <produto_compra id_produto = "P_004" quantidade = "1"/>
+            <data_compra>2/11/2021</data_compra>
+
+        </Compra>
+
+        <Compra id = "C_005" id_comprador = "U_002" situacao = "entregue">
+
+            <produto_compra id_produto = "P_001" quantidade = "1"/>
+            <produto_compra id_produto = "P_002" quantidade = "1"/>
+            <produto_compra id_produto = "P_004" quantidade = "2"/>
+            <data_compra>5/11/2021</data_compra>
+
+        </Compra>
+
+    </Compras>
+
+    <Comentarios>
+
+        <Comentario id_utilizador = "U_001" id_produto = "P_001" pontuacao = "5">
+
+            <texto>Qualidade excelente!!</texto>
+            <data_comentario>01/10/2021</data_comentario>
+
+            <Comentario id_utilizador = "U_002">
+
+                <texto>Concordo.</texto>
+                <data_comentario>22/10/2021</data_comentario>
+
+            </Comentario>
+
+        </Comentario>
+
+        <Comentario id_utilizador = "U_002" id_produto = "P_002" pontuacao = "4">
+
+            <texto>Apenas 4 estrelas porque a bateria continua a gastar-se rapidamente.</texto>
+            <data_comentario>01/11/2021</data_comentario>
+
+        </Comentario>
+
+        <Comentario id_utilizador = "U_001" id_produto = "P_001" pontuacao = "3">
+
+            <texto>Muito bom.</texto>
+            <data_comentario>02/11/2021</data_comentario>
+
+            <Comentario id_utilizador="U_004">
+
+                <texto></texto>
+                <data_comentario>02/11/2021</data_comentario>
+
+            </Comentario>
+
+        </Comentario>
+
+        <Comentario id_utilizador = "U_002" id_produto = "P_003" pontuacao = "5">
+
+            <texto>Muito bom para passar o tempo.</texto>
+            <data_comentario>05/11/2021</data_comentario>
+
+            <Comentario id_utilizador = "U_001">
+
+                <texto>Estou a pensar comprar uma para o Natal.</texto>
+                <data_comentario>07/11/2021</data_comentario>
+
+            </Comentario>
+
+        </Comentario>
+
+        <Comentario id_utilizador = "U_001" id_produto = "P_001" pontuacao = "2">
+
+            <texto>Problemas com a bateria.</texto>
+            <data_comentario>11/11/2021</data_comentario>
+
+        </Comentario>  
+    
+    </Comentarios>
+
+</Loja>

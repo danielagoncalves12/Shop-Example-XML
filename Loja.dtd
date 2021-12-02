@@ -1,0 +1,88 @@
+<!-- Loja -->
+<!ELEMENT Loja (Utilizadores, Vendedores, Produtos, Compras, Comentarios)>
+
+<!-- Dentro da Loja -->
+<!ELEMENT Utilizadores (Utilizador*)>
+<!ELEMENT Vendedores (Vendedor*)>
+<!ELEMENT Produtos (Produto*)>
+<!ELEMENT Compras (Compra*)>
+<!ELEMENT Comentarios (Comentario*)>
+
+<!-- Dentro de cada elemento -->
+<!ELEMENT Utilizador (nome, email, data_nascimento?, numero_telefone+, morada, foto?, produtos_desejados?, carrinho_compras)>
+<!ELEMENT Vendedor (nome, email, data_nascimento?, numero_telefone+, morada, foto?)>
+<!ELEMENT Produto (descricao, caracteristicas_tecnicas, preco, data_insercao, transportadora+, link*, referencias*)>
+<!ELEMENT Compra (produto_compra+, data_compra)>
+<!ELEMENT Comentario (texto, data_comentario, Comentario*)>
+
+<!-- Atributos -->
+<!ATTLIST Utilizador
+    id ID #REQUIRED
+    username CDATA #REQUIRED
+    password CDATA #REQUIRED
+>
+<!ATTLIST Vendedor
+    id ID #REQUIRED
+    username CDATA #REQUIRED
+    password CDATA #REQUIRED
+>
+<!ATTLIST Produto
+    id ID #REQUIRED
+    id_vendedor IDREF #IMPLIED
+    nome CDATA #IMPLIED
+>
+<!ATTLIST Compra
+    id ID #REQUIRED
+    id_comprador IDREF #IMPLIED
+    situacao CDATA #REQUIRED
+>
+<!ATTLIST Comentario
+    id_utilizador IDREF #REQUIRED
+    id_produto IDREF #IMPLIED
+    pontuacao CDATA #IMPLIED
+>
+
+<!-- Elementos -->
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT data_nascimento (#PCDATA)>
+<!ELEMENT numero_telefone (#PCDATA)>
+<!ELEMENT morada (#PCDATA)>
+<!ELEMENT foto EMPTY>
+<!ATTLIST foto link CDATA #IMPLIED>
+<!ELEMENT produtos_desejados EMPTY>
+<!ATTLIST produtos_desejados id_produtos IDREFS #IMPLIED>
+
+<!ELEMENT carrinho_compras (#PCDATA)>
+<!ATTLIST carrinho_compras id_produtos IDREFS #IMPLIED>
+
+<!ELEMENT descricao (#PCDATA)>
+<!ELEMENT caracteristicas_tecnicas EMPTY>
+<!ATTLIST caracteristicas_tecnicas
+    nome CDATA #REQUIRED
+    valor CDATA #REQUIRED
+>
+<!ELEMENT valor (#PCDATA)>
+<!ELEMENT preco (#PCDATA)>
+<!ELEMENT data_insercao (#PCDATA)>
+<!ELEMENT transportadora EMPTY>
+<!ATTLIST transportadora opcao (CTT | UPS | SEUR | MRW) #REQUIRED>
+<!ELEMENT link EMPTY>
+<!ATTLIST link
+    imagem CDATA #IMPLIED
+    video CDATA #IMPLIED
+>
+<!ELEMENT referencias EMPTY>
+<!ATTLIST referencias id_produtos IDREFS #IMPLIED>
+
+<!ELEMENT produto_compra (#PCDATA)>
+<!ATTLIST produto_compra
+    id_produto IDREF #IMPLIED
+    quantidade CDATA #IMPLIED
+>
+
+<!ELEMENT data_compra (#PCDATA)>
+<!ELEMENT situacao EMPTY>
+<!ATTLIST situacao opcao (emPreparacao | emExpedicao | entregue | devolvida | cancelada) #REQUIRED>
+<!ELEMENT texto (#PCDATA)>
+<!ELEMENT data_comentario (#PCDATA)>
